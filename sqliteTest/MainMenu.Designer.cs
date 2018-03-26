@@ -101,6 +101,7 @@
             this.createTableToolStripMenuItem.Name = "createTableToolStripMenuItem";
             this.createTableToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
             this.createTableToolStripMenuItem.Text = "Create Table";
+            this.createTableToolStripMenuItem.Click += new System.EventHandler(this.createTableToolStripMenuItem_Click);
             // 
             // utilitiesToolStripMenuItem
             // 
@@ -223,6 +224,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(474, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -234,12 +236,14 @@
             this.createNewSQLiteDatabaseToolStripMenuItem.Name = "createNewSQLiteDatabaseToolStripMenuItem";
             this.createNewSQLiteDatabaseToolStripMenuItem.Size = new System.Drawing.Size(474, 26);
             this.createNewSQLiteDatabaseToolStripMenuItem.Text = "Create New SQLite Database";
+            this.createNewSQLiteDatabaseToolStripMenuItem.Click += new System.EventHandler(this.createNewSQLiteDatabaseToolStripMenuItem_Click);
             // 
             // openExistingSQLiteDatabaseToolStripMenuItem
             // 
             this.openExistingSQLiteDatabaseToolStripMenuItem.Name = "openExistingSQLiteDatabaseToolStripMenuItem";
             this.openExistingSQLiteDatabaseToolStripMenuItem.Size = new System.Drawing.Size(474, 26);
             this.openExistingSQLiteDatabaseToolStripMenuItem.Text = "Open Existing SQLite Database (For Testing Purpose ONLY)";
+            this.openExistingSQLiteDatabaseToolStripMenuItem.Click += new System.EventHandler(this.openExistingSQLiteDatabaseToolStripMenuItem_Click);
             // 
             // databaseToolStripMenuItem
             // 

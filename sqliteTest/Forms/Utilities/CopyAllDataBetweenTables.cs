@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
-namespace SQLiteHelperTestApp.Forms.Utilities
+namespace sqliteTest.Forms.Utilities
 {
     public partial class CopyAllDataBetweenTables : Form
     {

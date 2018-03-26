@@ -1,4 +1,4 @@
-﻿namespace SQLiteHelperTestApp.Forms.Utilities
+﻿namespace sqliteTest.Forms.Utilities
 {
     partial class CopyAllDataBetweenTables
     {
