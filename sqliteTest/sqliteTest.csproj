@@ -72,6 +72,48 @@
     <Compile Include="Forms\DBInfo\ShowDatabase.Designer.cs">
       <DependentUpon>ShowDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Query\Execute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\Execute.Designer.cs">
+      <DependentUpon>Execute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\ExecuteScalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\ExecuteScalar.Designer.cs">
+      <DependentUpon>ExecuteScalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\Insert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\Insert.Designer.cs">
+      <DependentUpon>Insert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\LastInsertRowId.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\LastInsertRowId.Designer.cs">
+      <DependentUpon>LastInsertRowId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\Select.Designer.cs">
+      <DependentUpon>Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\Transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\Transaction.Designer.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Utilities\AttachDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,11 +156,17 @@
     <Compile Include="Forms\Utilities\UpdateTableStructure.Designer.cs">
       <DependentUpon>UpdateTableStructure.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,6 +185,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DBInfo\ShowDatabase.resx">
       <DependentUpon>ShowDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\Execute.resx">
+      <DependentUpon>Execute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\ExecuteScalar.resx">
+      <DependentUpon>ExecuteScalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\Insert.resx">
+      <DependentUpon>Insert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\LastInsertRowId.resx">
+      <DependentUpon>LastInsertRowId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\Select.resx">
+      <DependentUpon>Select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\Transaction.resx">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Utilities\AttachDatabase.resx">
       <DependentUpon>AttachDatabase.cs</DependentUpon>
@@ -159,8 +228,11 @@
     <EmbeddedResource Include="Forms\Utilities\UpdateTableStructure.resx">
       <DependentUpon>UpdateTableStructure.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

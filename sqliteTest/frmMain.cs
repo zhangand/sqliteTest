@@ -9,13 +9,21 @@ using System.Data.SQLite;
 
 namespace sqliteTest
 {
-    public partial class MainMenu : Form
+    public partial class frmMain : Form
     {
-        public MainMenu()
+        public frmMain()
         {
             InitializeComponent();
             HideAllMenu();
         }
+
+        public frmMain(string strName)
+        {
+            InitializeComponent();
+            HideAllMenu();
+            SendNameValue = strName;
+        }
+        public string SendNameValue;
 
         //Commom
         void RevealAllMenu()
@@ -49,11 +57,15 @@ namespace sqliteTest
                 return false;
             }
         }
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
 
         //Database
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Application.Exit();
         }
         private void openExistingSQLiteDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -104,6 +116,14 @@ namespace sqliteTest
             f.Show();
         }
 
+
+        //Query
+        private void selectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.Query.Select f = new Forms.Query.Select();
+            f.Show();
+        }
+
         //Utilities
         private void createTableToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -111,7 +131,7 @@ namespace sqliteTest
             f.Show();
         }
 
-
+       
     }
 
 }

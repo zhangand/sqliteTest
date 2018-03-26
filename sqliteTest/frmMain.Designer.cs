@@ -1,6 +1,6 @@
-﻿namespace SQLiteHelperTestApp
+﻿namespace sqliteTest
 {
-    partial class MainMenu
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lbDB = new System.Windows.Forms.ToolStripStatusLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.attachDetachDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateTablesStructureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dropTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,11 +40,11 @@
             this.transactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.executeScalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.selectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.queryExecutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.executeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.queryExecutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getColumnStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getTableListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,8 +55,8 @@
             this.createNewSQLiteDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openExistingSQLiteDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteSQLiteDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,15 +65,6 @@
             // 
             this.lbDB.Name = "lbDB";
             this.lbDB.Size = new System.Drawing.Size(0, 17);
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(687, 167);
-            this.panel1.TabIndex = 4;
             // 
             // attachDetachDatabaseToolStripMenuItem
             // 
@@ -150,29 +140,29 @@
             this.insertToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.insertToolStripMenuItem.Text = "Insert";
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lbDB});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 195);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(687, 22);
-            this.statusStrip1.TabIndex = 5;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
             // executeScalarToolStripMenuItem
             // 
             this.executeScalarToolStripMenuItem.Name = "executeScalarToolStripMenuItem";
             this.executeScalarToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.executeScalarToolStripMenuItem.Text = "ExecuteScalar";
             // 
-            // selectToolStripMenuItem
+            // statusStrip1
             // 
-            this.selectToolStripMenuItem.Name = "selectToolStripMenuItem";
-            this.selectToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
-            this.selectToolStripMenuItem.Text = "Select";
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbDB});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 233);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(876, 22);
+            this.statusStrip1.TabIndex = 5;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // executeToolStripMenuItem
+            // 
+            this.executeToolStripMenuItem.Name = "executeToolStripMenuItem";
+            this.executeToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.executeToolStripMenuItem.Text = "Execute";
             // 
             // queryExecutionToolStripMenuItem
             // 
@@ -188,35 +178,40 @@
             this.queryExecutionToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.queryExecutionToolStripMenuItem.Text = "Query";
             // 
-            // executeToolStripMenuItem
+            // selectToolStripMenuItem
             // 
-            this.executeToolStripMenuItem.Name = "executeToolStripMenuItem";
-            this.executeToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
-            this.executeToolStripMenuItem.Text = "Execute";
+            this.selectToolStripMenuItem.Name = "selectToolStripMenuItem";
+            this.selectToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.selectToolStripMenuItem.Text = "Select";
+            this.selectToolStripMenuItem.Click += new System.EventHandler(this.selectToolStripMenuItem_Click);
             // 
             // showDatabaseToolStripMenuItem
             // 
             this.showDatabaseToolStripMenuItem.Name = "showDatabaseToolStripMenuItem";
             this.showDatabaseToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.showDatabaseToolStripMenuItem.Text = "Show Database";
+            this.showDatabaseToolStripMenuItem.Click += new System.EventHandler(this.showDatabaseToolStripMenuItem_Click);
             // 
             // getColumnStatusToolStripMenuItem
             // 
             this.getColumnStatusToolStripMenuItem.Name = "getColumnStatusToolStripMenuItem";
             this.getColumnStatusToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.getColumnStatusToolStripMenuItem.Text = "GetColumnStatus";
+            this.getColumnStatusToolStripMenuItem.Click += new System.EventHandler(this.getColumnStatusToolStripMenuItem_Click);
             // 
             // getTableListToolStripMenuItem
             // 
             this.getTableListToolStripMenuItem.Name = "getTableListToolStripMenuItem";
             this.getTableListToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.getTableListToolStripMenuItem.Text = "GetTableList";
+            this.getTableListToolStripMenuItem.Click += new System.EventHandler(this.getTableListToolStripMenuItem_Click);
             // 
             // getTableStatusToolStripMenuItem
             // 
             this.getTableStatusToolStripMenuItem.Name = "getTableStatusToolStripMenuItem";
             this.getTableStatusToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.getTableStatusToolStripMenuItem.Text = "GetTableStatus";
+            this.getTableStatusToolStripMenuItem.Click += new System.EventHandler(this.getTableStatusToolStripMenuItem_Click);
             // 
             // dBInfoToolStripMenuItem
             // 
@@ -260,19 +255,11 @@
             this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openExistingSQLiteDatabaseToolStripMenuItem,
             this.createNewSQLiteDatabaseToolStripMenuItem,
-            this.deleteSQLiteDatabaseToolStripMenuItem,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
             this.databaseToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.databaseToolStripMenuItem.Text = "Database";
-            // 
-            // deleteSQLiteDatabaseToolStripMenuItem
-            // 
-            this.deleteSQLiteDatabaseToolStripMenuItem.Name = "deleteSQLiteDatabaseToolStripMenuItem";
-            this.deleteSQLiteDatabaseToolStripMenuItem.Size = new System.Drawing.Size(474, 26);
-            this.deleteSQLiteDatabaseToolStripMenuItem.Text = "Delete SQLite Database";
-            this.deleteSQLiteDatabaseToolStripMenuItem.Click += new System.EventHandler(this.deleteSQLiteDatabaseToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -285,21 +272,30 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(687, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(876, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // Form1
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(876, 255);
+            this.panel1.TabIndex = 4;
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 217);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(876, 255);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainMenu";
+            this.Controls.Add(this.panel1);
+            this.Name = "frmMain";
             this.Text = "SQLite Helper Test App";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -312,7 +308,6 @@
         #endregion
 
         private System.Windows.Forms.ToolStripStatusLabel lbDB;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem attachDetachDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateTablesStructureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dropTableToolStripMenuItem;
@@ -324,11 +319,11 @@
         private System.Windows.Forms.ToolStripMenuItem transactionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem insertToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripMenuItem executeScalarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem selectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem queryExecutionToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripMenuItem executeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem queryExecutionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem getColumnStatusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem getTableListToolStripMenuItem;
@@ -340,7 +335,7 @@
         private System.Windows.Forms.ToolStripMenuItem openExistingSQLiteDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem deleteSQLiteDatabaseToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
