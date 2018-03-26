@@ -1,4 +1,4 @@
-﻿namespace SQLiteHelperTestApp.Forms.DBInfo
+﻿namespace sqliteTest.Forms.DBInfo
 {
     partial class GetColumnStatus
     {

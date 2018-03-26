@@ -82,6 +82,28 @@ namespace sqliteTest
             }
         }
 
+        //DB info
+        private void getTableStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.DBInfo.GetTableStatus f = new Forms.DBInfo.GetTableStatus();
+            f.Show();
+        }
+        private void getTableListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.DBInfo.GetTableList f = new Forms.DBInfo.GetTableList();
+            f.Show();
+        }
+        private void getColumnStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.DBInfo.GetColumnStatus f = new Forms.DBInfo.GetColumnStatus();
+            f.Show();
+        }
+        private void showDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.DBInfo.ShowDatabase f = new Forms.DBInfo.ShowDatabase();
+            f.Show();
+        }
+
         //Utilities
         private void createTableToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -89,8 +111,6 @@ namespace sqliteTest
             f.Show();
         }
 
-
-        //
 
     }
 

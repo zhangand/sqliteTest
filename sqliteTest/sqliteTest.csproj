@@ -48,6 +48,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="config.cs" />
+    <Compile Include="Forms\DBInfo\GetColumnStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DBInfo\GetColumnStatus.Designer.cs">
+      <DependentUpon>GetColumnStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DBInfo\GetTableList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DBInfo\GetTableList.Designer.cs">
+      <DependentUpon>GetTableList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DBInfo\GetTableStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DBInfo\GetTableStatus.Designer.cs">
+      <DependentUpon>GetTableStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DBInfo\ShowDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DBInfo\ShowDatabase.Designer.cs">
+      <DependentUpon>ShowDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Utilities\AttachDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +126,18 @@
     <Compile Include="SQLiteHelper\SQLiteColumnList.cs" />
     <Compile Include="SQLiteHelper\SQLiteHelper.cs" />
     <Compile Include="SQLiteHelper\SQLiteTable.cs" />
+    <EmbeddedResource Include="Forms\DBInfo\GetColumnStatus.resx">
+      <DependentUpon>GetColumnStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DBInfo\GetTableList.resx">
+      <DependentUpon>GetTableList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DBInfo\GetTableStatus.resx">
+      <DependentUpon>GetTableStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DBInfo\ShowDatabase.resx">
+      <DependentUpon>ShowDatabase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Utilities\AttachDatabase.resx">
       <DependentUpon>AttachDatabase.cs</DependentUpon>
     </EmbeddedResource>

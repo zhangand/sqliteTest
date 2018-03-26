@@ -189,24 +189,28 @@
             this.showDatabaseToolStripMenuItem.Name = "showDatabaseToolStripMenuItem";
             this.showDatabaseToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.showDatabaseToolStripMenuItem.Text = "Show Database";
+            this.showDatabaseToolStripMenuItem.Click += new System.EventHandler(this.showDatabaseToolStripMenuItem_Click);
             // 
             // getColumnStatusToolStripMenuItem
             // 
             this.getColumnStatusToolStripMenuItem.Name = "getColumnStatusToolStripMenuItem";
             this.getColumnStatusToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.getColumnStatusToolStripMenuItem.Text = "GetColumnStatus";
+            this.getColumnStatusToolStripMenuItem.Click += new System.EventHandler(this.getColumnStatusToolStripMenuItem_Click);
             // 
             // getTableListToolStripMenuItem
             // 
             this.getTableListToolStripMenuItem.Name = "getTableListToolStripMenuItem";
             this.getTableListToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.getTableListToolStripMenuItem.Text = "GetTableList";
+            this.getTableListToolStripMenuItem.Click += new System.EventHandler(this.getTableListToolStripMenuItem_Click);
             // 
             // getTableStatusToolStripMenuItem
             // 
             this.getTableStatusToolStripMenuItem.Name = "getTableStatusToolStripMenuItem";
             this.getTableStatusToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.getTableStatusToolStripMenuItem.Text = "GetTableStatus";
+            this.getTableStatusToolStripMenuItem.Click += new System.EventHandler(this.getTableStatusToolStripMenuItem_Click);
             // 
             // dBInfoToolStripMenuItem
             // 

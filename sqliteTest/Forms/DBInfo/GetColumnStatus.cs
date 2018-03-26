@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
-namespace SQLiteHelperTestApp.Forms.DBInfo
+namespace sqliteTest.Forms.DBInfo
 {
     public partial class GetColumnStatus : Form
     {
