@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Net.Sockets;
+using System.Net;
 
 namespace sqliteTest
 {
     public partial class frmLogin : Form
     {
-
+        public string clientIP;
+        public string clientPort;
+        public Socket ClientSocket = null;
 
         public frmLogin()
         {
             InitializeComponent();
         }
 
-         //define user method
+        //define user method
         private Boolean LoginInfoCheck(string username, string password)//check the username and password
         {
             try
@@ -58,7 +55,34 @@ namespace sqliteTest
                 return false;
             }
         }
+        private Boolean SocketConnectionCheck(string ip, string port)//check the ip and port connection
+        {
+            ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPAddress yourAddress = IPAddress.Parse(ip);
+            int yourPort = int.Parse(port);
 
+            try
+            {
+                IAsyncResult connResult = ClientSocket.BeginConnect(yourAddress, yourPort, null, null);
+                connResult.AsyncWaitHandle.WaitOne(1000, true);  //wait 1 second
+
+                if (connResult.IsCompleted)
+                {
+                    return true;
+                }
+                else
+                {
+                    ClientSocket.Close();
+                    return false;
+                }
+
+            }
+            catch (SocketException se)
+            {
+                MessageBox.Show(se.Message);
+                return false;
+            }
+        }
 
         //define control method
         private void btnCancel_Click(object sender, EventArgs e)//close the login form
@@ -80,6 +104,14 @@ namespace sqliteTest
             if (txtPwd.Text == "")
             {
                 MessageBox.Show("Password can not be blank!");
+                return;
+            }
+
+            clientIP = txtIP.Text.Trim();
+            clientPort = txtPort.Text.Trim();
+            if (!SocketConnectionCheck(clientIP, clientPort))
+            {
+                MessageBox.Show("Server no response!");
                 return;
             }
 

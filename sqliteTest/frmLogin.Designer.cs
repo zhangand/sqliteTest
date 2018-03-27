@@ -62,40 +62,47 @@
             // 
             // txtUser
             // 
+            this.txtUser.BackColor = System.Drawing.SystemColors.Info;
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(194, 110);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(161, 27);
             this.txtUser.TabIndex = 2;
+            this.txtUser.Text = "admin";
             // 
             // txtPwd
             // 
+            this.txtPwd.BackColor = System.Drawing.SystemColors.Info;
             this.txtPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwd.Location = new System.Drawing.Point(194, 150);
             this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(161, 27);
             this.txtPwd.TabIndex = 3;
+            this.txtPwd.UseSystemPasswordChar = true;
             // 
             // btnOK
             // 
+            this.btnOK.BackColor = System.Drawing.Color.Transparent;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.Location = new System.Drawing.Point(75, 210);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(120, 30);
             this.btnOK.TabIndex = 4;
             this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(235, 210);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(120, 30);
             this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "Cancle";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label3
@@ -120,24 +127,29 @@
             // 
             // txtIP
             // 
+            this.txtIP.BackColor = System.Drawing.SystemColors.Info;
             this.txtIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIP.Location = new System.Drawing.Point(194, 30);
             this.txtIP.Name = "txtIP";
             this.txtIP.Size = new System.Drawing.Size(161, 27);
             this.txtIP.TabIndex = 0;
+            this.txtIP.Text = "192.168.0.100";
             // 
             // txtPort
             // 
+            this.txtPort.BackColor = System.Drawing.SystemColors.Info;
             this.txtPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPort.Location = new System.Drawing.Point(194, 70);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(161, 27);
             this.txtPort.TabIndex = 1;
+            this.txtPort.Text = "30";
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(432, 305);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
@@ -149,8 +161,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.Text = "Flash Testing Client-Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
