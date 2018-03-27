@@ -13,56 +13,41 @@ namespace sqliteTest
 {
     public partial class frmLogin : Form
     {
+
+
         public frmLogin()
         {
             InitializeComponent();
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+         //define user method
+        private Boolean LoginInfoCheck(string username, string password)//check the username and password
         {
-
-            if (txtID.Text == "")
-            {
-                MessageBox.Show("用户名不能为空！");
-                return;
-            }
-            if (txtPwd.Text == "")
-            {
-                MessageBox.Show("密码不能为空！");
-                return;
-            }
-
             try
             {
-                OpenFileDialog f = new OpenFileDialog();
-                if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    config.DatabaseFile = f.FileName;
-                }
+                config.DatabaseFile = "database.sqlite";
 
                 using (SQLiteConnection conn = new SQLiteConnection(config.DataSource))
                 {
                     conn.Open();
-                    string Query = "select * from employee where username='" + this.txtID.Text + "' and password='" + this.txtPwd.Text + "'";
+                    string Query = "select * from employee where username='" + this.txtUser.Text + "' and password='" + this.txtPwd.Text + "'";
                     SQLiteCommand createCommand = new SQLiteCommand(Query, conn);
 
                     createCommand.ExecuteNonQuery();
                     SQLiteDataReader dr = createCommand.ExecuteReader();
 
                     int count = 0;
-                    while(dr.Read())
+                    while (dr.Read())
                     {
                         count++;
                     }
-                    if(count==1)
+                    if (count == 1)
                     {
-                        frmMain frm = new frmMain(txtID.Text);
-                        frm.Show();
-                        this.Hide();
+                        return true;
                     }
                     else
                     {
-                        MessageBox.Show("Username and Password is not correct");
+                        return false;
                     }
 
                 }
@@ -70,18 +55,42 @@ namespace sqliteTest
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                return false;
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
 
+        //define control method
+        private void btnCancel_Click(object sender, EventArgs e)//close the login form
+        {
+            Application.Exit();
+        }
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)//close the login form
+        {
+            Application.Exit();
+        }
+        private void btnOK_Click(object sender, EventArgs e)//login button
+        {
+
+            if (txtUser.Text == "")
+            {
+                MessageBox.Show("Username can not be blank!");
+                return;
+            }
+            if (txtPwd.Text == "")
+            {
+                MessageBox.Show("Password can not be blank!");
+                return;
+            }
+
+            if (LoginInfoCheck(txtUser.Text.Trim(), txtPwd.Text.Trim()))
+            {
+                frmMain frm = new frmMain(txtUser.Text);
+                frm.Show();
+                this.Hide();
+            }
+            else MessageBox.Show("Username and Password is not correct");
+        }
 
     }
 }
